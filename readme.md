@@ -9,6 +9,7 @@
   - [RoBERTa](#roberta)
 - [🦾 How Can We Use LLM's?](#-how-can-we-use-llms)
 - [👇 In This Repo](#-in-this-repo)
+- [🙅 Not In This Repo](#-not-in-this-repo)
 
 <br />
 
@@ -134,3 +135,9 @@ All three notebooks share a number of parameters. I've gathered these parameters
 **`params.py`** : Contains parameters shared between all three notebooks.
 
 </ul>
+
+# 🙅 Not In This Repo
+
+The notebooks in this repository refrences datasets too large to store on Github. You may download those datasets ....
+
+We also load model files that have been created by running given notebooks. They are also too large to store on Github.
