@@ -23,7 +23,7 @@ I have additionally researched and implemented language classification models in
 
 I've been asked to present a brief practical workshop on how to use these language models, specifically RoBERTa.
 
-<table style="border-style:hidden;border-collapse:collapse;">
+<table border="0" style="border-style:hidden;border-collapse:collapse;">
     <tr>
     <td valign="bottom">
         <a href="https://www.linkedin.com/in/jarradhjinks/"><img src="presentation_resources/linkedin.png"
