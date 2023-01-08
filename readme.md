@@ -27,11 +27,11 @@ I've been asked to present a brief practical workshop on how to use these langua
     <tr>
     <td valign="bottom">
         <a href="https://www.linkedin.com/in/jarradhjinks/"><img src="presentation_resources/linkedin.png"
-             style='zoom:5%;'><br /><p>@jarradhjinks</p></img></a>
+             width="100px"><br /><p>@jarradhjinks</p></img></a>
     </td>
     <td align="bottom"> 
         <a href="https://github.com/jahjinx"><img src="presentation_resources/github.png" 
-             style='zoom:12%;'/><br /><p>@jahjinx</p></img></a>
+             width="100px"/><br /><p>@jahjinx</p></img></a>
     </td>
     </tr>
 </table>
@@ -136,8 +136,15 @@ All three notebooks share a number of parameters. I've gathered these parameters
 
 </ul>
 
+<br />
+
 # 🙅 Not In This Repo
 
-The notebooks in this repository refrences datasets too large to store on Github. You may download those datasets ....
+The inference section of the notebooks in this repository load model files that have been created by running given notebooks. They are too large to store on Github. If you would like to run inference without fine-tuning and saving new models, you may load a prepared model from HuggingFace by updating the notebooks with the following code:
 
-We also load model files that have been created by running given notebooks. They are also too large to store on Github.
+```
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+
+model = AutoModelForSequenceClassification.from_pretrained("jahjinx/RoBERTa-base-imdb")
+tokenizer = AutoTokenizer.from_pretrained("jahjinx/RoBERTa-base-imdb")
+```
