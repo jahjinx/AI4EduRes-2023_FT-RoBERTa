@@ -18,7 +18,6 @@ output_dir: str            = None
 save_freq: float           = 1
 checkpoint_freq: float     = 1
 
-
 # --------- Tokenizer Parameters --------- 
 tokenizer                  = RobertaTokenizer.from_pretrained("roberta-base")
 max_length: float          = 512 # length of tokenized phrases allowed, 512 max for RoBERTa

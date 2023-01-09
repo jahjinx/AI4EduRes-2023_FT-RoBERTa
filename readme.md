@@ -21,8 +21,6 @@ Currently conducting research on the diversity of inducers produced by fine-tune
 
 I have additionally researched and implemented language classification models in a professional setting where I contributed to a team that took a modified RoBERTa-large from selection, fine-tuning, and testing to a production environment. 
 
-I've been asked to present a brief practical workshop on how to use these language models, specifically RoBERTa.
-
 <table border="0" style="border-style:hidden;border-collapse:collapse;">
     <tr>
     <td valign="bottom">
@@ -77,10 +75,9 @@ Read More About BERT: <a href="https://arxiv.org/abs/1810.04805">BERT: Pre-train
 ## RoBERTa
 RoBERTa, "A Robustly Optimized BERT Pretraining Approach", builds and improves upon the BERT model. 
 - RoBERTa has the same architecture as BERT, uses a different tokenizer and pretraining scheme.
-    - Particularly, researchers modified key hyperparameters, removed the next-sentence pretraining objective and trained RoBERTa with larger mini-batches and learning rates. <br /><br />
-
+    - Particularly, researchers modified key hyperparameters, removed the next-sentence pretraining objective and trained RoBERTa with larger mini-batches and learning rates.
 - RoBERTa was also pre-trained using dynamic masking
-- Similar to BERT, RoBERTa comes in different variations offering speed/performance tradeoffs. Today we'll be using RoBERTa-large
+- Similar to BERT, RoBERTa comes in different variations offering speed/performance tradeoffs. Here, we use RoBERTa-base
 
 Read More About RoBERTa: <a href="https://arxiv.org/abs/1907.11692">RoBERTa: A Robustly Optimized BERT Pretraining Approach
 </a>
@@ -89,13 +86,13 @@ Read More About RoBERTa: <a href="https://arxiv.org/abs/1907.11692">RoBERTa: A R
 
 # 🦾 How Can We Use LLM's?
 
-Models like BERT and RoBERTa offer unprecedented access to state-of-the-art language modeling. Research, development, and compute costs for these models are often exceedingly expensive and out of reach for individuals and smaller organizations, especially with consideration for the growing size and complexity of new architectures seeking to achieve greater generalization and better performance. 
+Models like BERT and RoBERTa offer unprecedented access to state-of-the-art language modeling. Research, development, and compute involved in creating these models are often exceedingly expensive and out of reach for individuals/smaller organizations, especially with consideration for the growing size and complexity of new architectures seeking to achieve greater generalization and better performance. 
 
 Fortunately, companies with greater resources, Google, Facebook, etc., have shouldered the cost of developing and pre-training language models that respond to a process called "fine-tuning".
 
 Fine-tuning allows us to leverage learning that took place during pre-training for new tasks by adjusting the weights of the pre-trained model. This process requires significantly less data and fewer training epochs than would have been necessary from training a new model from scratch. The intuitive implication is that the pre-trained model already has a significant foundation on how to represent language generally and that the purpose of fine-tuning is only to nudge it in the direction of our target task.
 
-Fine-tuning involves the application of a new classification head (typically a fully-connected neural layer) to the core, pre-trained model. We will then train the model on a dataset representative of our target task. In the case of BERT, this means the model will have been trained three times (Masked-word prediction, next-sentence prediction, and target task classification). Fine-tuning, specifically, is the training that occurs subsequent to the pre-training process. 
+Fine-tuning first involves the application of a new classification head (typically a fully-connected neural layer) to the core, pre-trained model. We will then train the model on a dataset representative of our target task. In the case of BERT, this means the model will have been trained three times (Masked-word prediction, next-sentence prediction, and target task classification). Fine-tuning, specifically, is the training that occurs subsequent to the pre-training process. 
 <p style="text-align: center;"><img src="presentation_resources/fine_tuning.png" align="center"><figcaption style="text-align: center;">Modified from Alammar, J (2018). The Illustrated Transformer [Blog post]. Retrieved from https://jalammar.github.io/illustrated-transformer/</figcaption></p>
 
 <br />
