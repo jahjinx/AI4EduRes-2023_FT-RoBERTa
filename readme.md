@@ -45,7 +45,7 @@ To understand what RoBERTa is, it helps to introduce BERT.
 ## BERT
 BERT, Bidirectional Encoder Representations from Transformers, is a transformer-based language representation model developed by Google. It uses machine learning techniques for natural language processing (NLP) pre-training.
 
-BERT, and similar large lanugage models, are built to learn general representations in language. BERT is pre-trained on unlabeled data extracted from a dataset called <a href="https://arxiv.org/abs/1506.06724">BooksCorpus</a> with 800M words and English Wikipedia with 2,500M words. Because it aims to learn language in a more general sense, we are able to leverage that understanding to perform a diverse range of downstream tasks including question answering, classification, and next word/sentence prediction often with state-of-the-art results. 
+BERT, and similar large language models, are built to learn general representations in language. BERT is pre-trained on unlabeled data extracted from a dataset called <a href="https://arxiv.org/abs/1506.06724">BooksCorpus</a> with 800M words and English Wikipedia with 2,500M words. Because it aims to learn language in a more general sense, we are able to leverage that understanding to perform a diverse range of downstream tasks including question answering, classification, and next word/sentence prediction often with state-of-the-art results. 
 
 <br />
 
@@ -63,7 +63,7 @@ Masked word prediction is framed as a classification task. BERT accepts sentence
 <br />
 
 #### 2. Next-Sentence Prediction
-Next-sentence prediction is a simple binary classification problem during which BERT accepts an input of two sentences and learns wether or not the first entails the next. 
+Next-sentence prediction is a simple binary classification problem during which BERT accepts an input of two sentences and learns whether or not the first entails the next. 
 <p style="text-align: center;"><img src="presentation_resources/BERT-language-modeling-masked-lm.png" width="750" align="center"><figcaption style="text-align: center;">Alammar, J (2018). The Illustrated Transformer [Blog post]. Retrieved from https://jalammar.github.io/illustrated-transformer/</figcaption></p>
 
 There are multiple versions of BERT such as BERTbase, BERTlarge, and DistilBERT. These variations often denote size—trainable parameters—of the model offering speed/performance trade-offs.
@@ -74,7 +74,7 @@ Read More About BERT: <a href="https://arxiv.org/abs/1810.04805">BERT: Pre-train
 
 ## RoBERTa
 RoBERTa, "A Robustly Optimized BERT Pretraining Approach", builds and improves upon the BERT model. 
-- RoBERTa has the same architecture as BERT, uses a different tokenizer and pretraining scheme.
+- RoBERTa has the same architecture as BERT, but uses a different tokenizer and pretraining scheme.
     - Particularly, researchers modified key hyperparameters, removed the next-sentence pretraining objective and trained RoBERTa with larger mini-batches and learning rates.
 - RoBERTa was also pre-trained using dynamic masking
 - Similar to BERT, RoBERTa comes in different variations offering speed/performance tradeoffs. Here, we use RoBERTa-base
