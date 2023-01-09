@@ -12,8 +12,7 @@ warnings.filterwarnings(action='ignore', category=UserWarning)
 
 class Trainer:
     """
-    Trainer is a simple training and eval loop for PyTorch, including tdqm 
-        and iMessage sending for progress monitoring.
+    Trainer is a simple training and eval loop for PyTorch, including tdqm.
 
     Args
     ---------------
@@ -111,8 +110,12 @@ class Trainer:
                 for step, batch in enumerate(tepoch):
                     tepoch.set_description(f"Epoch {epoch}")
 
+                    # put data on device
                     batch = tuple(t.to(self.device) for t in batch)
+                    
+                    # parse batch
                     b_input_ids, b_input_mask, b_labels = batch
+                    
                     self.optimizer.zero_grad()
 
                     # Forward pass
