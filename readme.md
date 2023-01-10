@@ -64,7 +64,7 @@ Masked word prediction is framed as a classification task. BERT accepts sentence
 
 #### 2. Next-Sentence Prediction
 Next-sentence prediction is a simple binary classification problem during which BERT accepts an input of two sentences and learns whether or not the first entails the next. 
-<p style="text-align: center;"><img src="presentation_resources/BERT-language-modeling-masked-lm.png" width="750" align="center"><figcaption style="text-align: center;">Alammar, J (2018). The Illustrated Transformer [Blog post]. Retrieved from https://jalammar.github.io/illustrated-transformer/</figcaption></p>
+<p style="text-align: center;"><img src="presentation_resources/bert-next-sentence-prediction.png" width="750" align="center"><figcaption style="text-align: center;">Alammar, J (2018). The Illustrated Transformer [Blog post]. Retrieved from https://jalammar.github.io/illustrated-transformer/</figcaption></p>
 
 There are multiple versions of BERT such as BERTbase, BERTlarge, and DistilBERT. These variations often denote size—trainable parameters—of the model offering speed/performance trade-offs.
 
